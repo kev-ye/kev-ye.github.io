@@ -11,7 +11,7 @@ import { useLerpedMouse } from "./hooks";
 const cameraTargetPosition = new THREE.Vector3(0, -10, 211);
 export default function Scene({ scroll, ...props }) {
   const { nodes, materials } = useSpline(
-    "https://prod.spline.design/tjUXVnTeEy6zOp61/scene.splinecode"
+    "https://prod.spline.design/HwAUoybfBaBCLzwO/scene.spline"
   );
   const camera = useRef();
   const sceneContent = useRef();
@@ -518,8 +518,8 @@ export default function Scene({ scroll, ...props }) {
           </group>
           <mesh
             name="floor"
-            geometry={nodes.Floor.geometry}
-            material={materials["Floor Material"]}
+            geometry={nodes.floor.geometry}
+            material={materials["floor Material"]}
             castShadow
             receiveShadow
             position={[125.82, -329.82, 156.81]}
@@ -918,73 +918,65 @@ export default function Scene({ scroll, ...props }) {
             >
               <group
                 name="Text"
-                position={[2.69, 5.67, -80.13]}
-                rotation={[-0.37, 0.03, 0]}
-                scale={[1.51, 1.43, 3.3]}
+                position={[3.04, 1.12, -81.16]}
+                rotation={[-Math.PI / 9, 0, 0]}
+                scale={[1.64, 1.51, 1.51]}
               >
                 <mesh
-                  name="k"
-                  geometry={nodes.k.geometry}
-                  material={materials['My Text Material']}
+                  name="S"
+                  geometry={nodes.S.geometry}
+                  material={materials["S Material"]}
                   castShadow
                   receiveShadow
-                  position={[-41.5, -11.5, 0]}
+                  position={[-32, -6.5, 0]}
                 />
                 <mesh
-                  name="a"
-                  geometry={nodes.a.geometry}
-                  material={materials['My Text Material']}
+                  name="p"
+                  geometry={nodes.p.geometry}
+                  material={materials["p Material"]}
                   castShadow
                   receiveShadow
-                  position={[-29.4, -11.5, 0]}
+                  position={[-18.14, -6.5, 0]}
                 />
                 <mesh
-                  name="n"
-                  geometry={nodes.n.geometry}
-                  material={materials['My Text Material']}
+                  name="l"
+                  geometry={nodes.l.geometry}
+                  material={materials["l Material"]}
                   castShadow
                   receiveShadow
-                  position={[-16.41, -11.5, 0]}
-                />
-                <mesh
-                  name="g"
-                  geometry={nodes.g.geometry}
-                  material={materials['My Text Material']}
-                  castShadow
-                  receiveShadow
-                  position={[-2.99, -11.5, 0]}
-                />
-                <mesh
-                  name="k1"
-                  geometry={nodes.k1.geometry}
-                  material={materials['My Text Material']}
-                  castShadow
-                  receiveShadow
-                  position={[10.42, -11.5, 0]}
-                />
-                <mesh
-                  name="a1"
-                  geometry={nodes.a1.geometry}
-                  material={materials['My Text Material']}
-                  castShadow
-                  receiveShadow
-                  position={[22.52, -11.5, 0]}
+                  position={[-5.52, -6.5, 0]}
                 />
                 <mesh
                   name="i"
                   geometry={nodes.i.geometry}
-                  material={materials['My Text Material']}
+                  material={materials["i Material"]}
                   castShadow
                   receiveShadow
-                  position={[35.51, -11.5, 0]}
+                  position={[0.08, -6.5, 0]}
                 />
                 <mesh
                   name="i1"
                   geometry={nodes.i1.geometry}
-                  material={materials['My Text Material']}
+                  material={materials["i1 Material"]}
                   castShadow
                   receiveShadow
-                  position={[35.51, -11.5, 0]}
+                  position={[0.08, -6.5, 0]}
+                />
+                <mesh
+                  name="n"
+                  geometry={nodes.n.geometry}
+                  material={materials["n Material"]}
+                  castShadow
+                  receiveShadow
+                  position={[5.68, -6.5, 0]}
+                />
+                <mesh
+                  name="e"
+                  geometry={nodes.e.geometry}
+                  material={materials["e Material"]}
+                  castShadow
+                  receiveShadow
+                  position={[18.3, -6.5, 0]}
                 />
               </group>
               <mesh
