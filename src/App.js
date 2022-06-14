@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import Scene from "./Scene";
+import { Overlay } from "./Overlay";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const scroll = useRef(0);
+    return (
+      <>
+        <Canvas shadows flat linear>
+          <Suspense fallback={null}>
+            <Scene scroll={scroll} />
+          </Suspense>
+        </Canvas>
+        <Overlay scroll={scroll} />
+      </>
+    );
 }
-
-export default App;
