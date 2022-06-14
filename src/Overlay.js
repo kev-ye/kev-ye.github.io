@@ -1,6 +1,7 @@
 import styles from "./Overlay.module.css";
 import {BsFillTelephoneFill} from 'react-icons/bs';
 import styled from 'styled-components';
+import { v4 } from "uuid";
 import {FiMail} from 'react-icons/fi';
 import {
   SiCodio,
@@ -19,7 +20,9 @@ import {
   SiHtml5,
   SiCss3,
   SiGit,
-  SiAssemblyscript
+  SiAssemblyscript,
+  SiLinkedin,
+  SiGithub
 } from "react-icons/si";
 import {AiOutlineConsoleSql} from 'react-icons/ai'
 import {GiSkills} from 'react-icons/gi'
@@ -48,6 +51,10 @@ const TitleWrapper = styled.h2`
 const SupWrapper = styled.sup`
   margin-right: 10px;
   font-size: 12px;
+`
+
+const SocialWrapper = styled.div`
+  font-size: 75px;
 `
 
 const skillArray = [
@@ -114,13 +121,13 @@ export function Overlay({ scroll }) {
         
         <h2>Hi, everyone !</h2>
         <PresentationTextWrapper>
-        I have achive from <b>school 42</b> and <b>available immediately</b>,<br/>
-        I am looking for a <b>4 to 6 month internship</b><br/>
-        that will allow me to develop my skills in the new technologies sector.<br/>
-        I am passionate about programing.<br/>
-        Thanks to the project i have done in my school,<br/>
-        I now have a good aptitude for learning and working.<br/>
-        <b>Polyvalent</b>, <b>autonomous</b> and <b>a good integration in teamwork</b>.<br/>
+          I have achive from <b>school 42</b> and <b>available immediately</b>,<br/>
+          I am looking for a <b>4 to 6 month internship</b><br/>
+          that will allow me to develop my skills in the new technologies sector.<br/>
+          I am passionate about programing.<br/>
+          Thanks to the project i have done in my school,<br/>
+          I now have a good aptitude for learning and working.<br/>
+          <b>Polyvalent</b>, <b>autonomous</b> and <b>a good integration in teamwork</b>.<br/>
         </PresentationTextWrapper>
         <p>
           <svg
@@ -137,31 +144,31 @@ export function Overlay({ scroll }) {
               height="45"
               rx="13.5"
               stroke="#2D3A94"
-              stroke-opacity="0.6"
-              stroke-width="3"
+              strokeOpacity="0.6"
+              strokeWidth="3"
             />
             <path
               d="M15 12V20"
               stroke="#2D3A94"
-              stroke-opacity="0.6"
-              stroke-width="3"
-              stroke-linecap="round"
+              strokeOpacity="0.6"
+              strokeWidth="3"
+              strokeLinecap="round"
             />
             <path
               d="M8 54L14.5 60.5L21 54"
               stroke="#2D3A94"
-              stroke-opacity="0.6"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeOpacity="0.6"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M8 63L14.5 69.5L21 63"
               stroke="#2D3A94"
-              stroke-opacity="0.6"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeOpacity="0.6"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </p>
@@ -171,7 +178,7 @@ export function Overlay({ scroll }) {
         {skillArray.map(skill => {
           if (skill.length > 1) {
             return (
-              <DivWrapper>
+              <DivWrapper key={v4()}>
               {
                 skill.map(subSkill => {
                   const Logo = subSkill.logo
@@ -188,7 +195,7 @@ export function Overlay({ scroll }) {
           else {
             const Logo = skill[0].logo
             return (
-              <DivWrapper>
+              <DivWrapper key={v4()}>
                 <Logo/><SupWrapper>{` ${skill[0].name}`}</SupWrapper>
               </DivWrapper>
             )
@@ -200,38 +207,35 @@ export function Overlay({ scroll }) {
         <h3><b>WEB APPLICATION - <a href="https://github.com/kev-ye/Camagru">CAMAGRU</a></b></h3>
         Realization of a single page application like Instagram and Snapchat.
         <ul>
-          <li>Front-end: Html / Css / Javascript (Vanilla)</li>
-          <li>Back-end: Typescript (Express)</li>
-          <li>Database: MongoDB</li>
-          <li>Deployment: Docker-compose</li>
+          <li key={v4()}>Front-end: Html / Css / Javascript (Vanilla)</li>
+          <li key={v4()}>Back-end: Typescript (Express)</li>
+          <li key={v4()}>Database: MongoDB</li>
+          <li key={v4()}>Deployment: Docker-compose</li>
         </ul>
 
         <h3><b>WEB APPLICATION - <a href="https://github.com/kev-ye/Ft_transcendence">FT_TRANSCENDENCE</a> (TEAM)</b></h3>
         Realization of a single page application for an online pong game.
         <ul>
-          <li>Front-end: Typescript (Angular)</li>
-          <li>Back-end: Typescript (NestJs)</li>
-          <li>Database: PostgreSQL</li>
-          <li>Deployment: Docker-compose</li>
+          <li key={v4()}>Front-end: Typescript (Angular)</li>
+          <li key={v4()}>Back-end: Typescript (NestJs)</li>
+          <li key={v4()}>Database: PostgreSQL</li>
+          <li key={v4()}>Deployment: Docker-compose</li>
         </ul>
 
         <h3><b>WEB SERVER - <a href="https://github.com/kev-ye/webserv">WERSERV</a> (TEAM)</b></h3>
         Realization of a web server in C++ (Nginx 2.0).
         <ul>
-          <li>Development of a non-blocking single-threaded web server</li>
-          <li>Implementation of a file transfer system</li>
+          <li key={v4()}>Development of a non-blocking single-threaded web server</li>
+          <li key={v4()}>Implementation of a file transfer system</li>
         </ul>
       </section>
       <section style={{ height: "100vh" }} className={styles.sectionRight}>
-        <p>
-          In fact, I was built entirely with{" "}
-          <a href="https://spline.design" target="_blank" rel="noreferrer">
-            Kev_ye
-          </a>
-          !<br />
-          With love, by the Spline Team.
-        </p>
-        <p style={{ marginBottom: "300px" }}>PS: I have a conscience now... </p>
+        <SocialWrapper>
+          <a href="https://www.linkedin.com/in/kangkai-ye/"><SiLinkedin/></a>
+        </SocialWrapper>
+        <SocialWrapper>
+          <a href="https://github.com/kev-ye"><SiGithub/></a>
+        </SocialWrapper>
       </section>
     </div>
   );
