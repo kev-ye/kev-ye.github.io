@@ -26,6 +26,7 @@ import {
 } from "react-icons/si";
 import {AiOutlineConsoleSql} from 'react-icons/ai'
 import {GiSkills} from 'react-icons/gi'
+import React from "react";
 
 const InfoTextWrapper = styled.p`
   font-size: 20px;
@@ -183,9 +184,9 @@ export function Overlay({ scroll }) {
                 skill.map(subSkill => {
                   const Logo = subSkill.logo
                   return (
-                    <>
+                    <React.Fragment key={v4()}>
                       <Logo /><SupWrapper>{` ${subSkill.name} `}</SupWrapper>
-                    </>
+                    </React.Fragment>
                   )
                 })
               }
@@ -196,7 +197,7 @@ export function Overlay({ scroll }) {
             const Logo = skill[0].logo
             return (
               <DivWrapper key={v4()}>
-                <Logo/><SupWrapper>{` ${skill[0].name}`}</SupWrapper>
+                <Logo /><SupWrapper>{` ${skill[0].name}`}</SupWrapper>
               </DivWrapper>
             )
           }
@@ -207,26 +208,26 @@ export function Overlay({ scroll }) {
         <h3><b>WEB APPLICATION - <a href="https://github.com/kev-ye/Camagru">CAMAGRU</a></b></h3>
         Realization of a single page application like Instagram and Snapchat.
         <ul>
-          <li key={v4()}>Front-end: Html / Css / Javascript (Vanilla)</li>
-          <li key={v4()}>Back-end: Typescript (Express)</li>
-          <li key={v4()}>Database: MongoDB</li>
-          <li key={v4()}>Deployment: Docker-compose</li>
+          <li>Front-end: Html / Css / Javascript (Vanilla)</li>
+          <li>Back-end: Typescript (Express)</li>
+          <li>Database: MongoDB</li>
+          <li>Deployment: Docker-compose</li>
         </ul>
 
         <h3><b>WEB APPLICATION - <a href="https://github.com/kev-ye/Ft_transcendence">FT_TRANSCENDENCE</a> (TEAM)</b></h3>
         Realization of a single page application for an online pong game.
         <ul>
-          <li key={v4()}>Front-end: Typescript (Angular)</li>
-          <li key={v4()}>Back-end: Typescript (NestJs)</li>
-          <li key={v4()}>Database: PostgreSQL</li>
-          <li key={v4()}>Deployment: Docker-compose</li>
+          <li>Front-end: Typescript (Angular)</li>
+          <li>Back-end: Typescript (NestJs)</li>
+          <li>Database: PostgreSQL</li>
+          <li>Deployment: Docker-compose</li>
         </ul>
 
         <h3><b>WEB SERVER - <a href="https://github.com/kev-ye/webserv">WERSERV</a> (TEAM)</b></h3>
         Realization of a web server in C++ (Nginx 2.0).
         <ul>
-          <li key={v4()}>Development of a non-blocking single-threaded web server</li>
-          <li key={v4()}>Implementation of a file transfer system</li>
+          <li>Development of a non-blocking single-threaded web server</li>
+          <li>Implementation of a file transfer system</li>
         </ul>
       </section>
       <section style={{ height: "100vh" }} className={styles.sectionRight}>
