@@ -122,11 +122,12 @@ export function Overlay({ scroll }) {
         
         <h2>Hi, everyone !</h2>
         <PresentationTextWrapper>
-          I have achive from <b>school 42</b> and <b>available immediately</b>,<br/>
+          I come from <b>School 42</b> and I am <b>available immediately</b>,<br/>
           I am looking for a <b>4 to 6 month internship</b><br/>
-          that will allow me to develop my skills in the new technologies sector.<br/>
-          I am passionate about programing.<br/>
-          Thanks to the project i have done in my school,<br/>
+          that will allow me to develop my skills in the new technologies sector,<br/>
+          and I am particularly interested in back-end development.<br/><br/>
+          I am passionate about programming!<br/><br/>
+          Thanks to the projects I have done in my school,<br/>
           I now have a good aptitude for learning and working.<br/>
           <b>Polyvalent</b>, <b>autonomous</b> and <b>a good integration in teamwork</b>.<br/>
         </PresentationTextWrapper>
@@ -206,7 +207,7 @@ export function Overlay({ scroll }) {
       <section style={{ height: "100vh", fontSize: "18px" }} className={styles.sectionLeft}>
         <TitleWrapper>Projects</TitleWrapper>
         <h3><b>WEB APPLICATION - <a href="https://github.com/kev-ye/Camagru">CAMAGRU</a></b></h3>
-        Realization of a single page application like Instagram and Snapchat.
+        Realization of a single page application Instagram or Snapchat like.
         <ul>
           <li>Front-end: Html / Css / Javascript (Vanilla)</li>
           <li>Back-end: Typescript (Express)</li>
@@ -232,10 +233,10 @@ export function Overlay({ scroll }) {
       </section>
       <section style={{ height: "100vh" }} className={styles.sectionRight}>
         <SocialWrapper>
-          <a href="https://www.linkedin.com/in/kangkai-ye/"><SiLinkedin/></a>
+          <a href="https://www.linkedin.com/in/kangkai-ye/" target="_blank" rel="noreferrer"><SiLinkedin/></a>
         </SocialWrapper>
         <SocialWrapper>
-          <a href="https://github.com/kev-ye"><SiGithub/></a>
+          <a href="https://github.com/kev-ye" target="_blank" rel="noreferrer"><SiGithub/></a>
         </SocialWrapper>
       </section>
     </div>
